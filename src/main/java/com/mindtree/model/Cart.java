@@ -33,8 +33,7 @@ public class Cart {
 			cascade = CascadeType.ALL)
 	@JoinColumn(name="user_id")
 	private User user;
-	/*private Map<Product, Integer>  products;
-	private Map<Product, int>*/
+	
 	public int getCartId() {
 		return cartId;
 	}

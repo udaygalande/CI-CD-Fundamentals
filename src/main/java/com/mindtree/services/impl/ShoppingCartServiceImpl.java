@@ -66,20 +66,15 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 	}
 
 	@Transactional
-	public List<Product> getCartProducts() {
-		return null;
-	}
-
-	@Transactional
 	public Product addProduct(int productId, int userId) throws MyException {
 		try {
 			Optional<Product> optional = productRepository.findById(productId);
-			// Product product = null;
+			
 			if (optional.isPresent()) {
 				Product product = optional.get();
 
 				Optional<User> optionalUser = userRepository.findById(userId);
-				Set<Product> products;
+				Set<Product> products = null;
 				if (optionalUser.isPresent()) {
 					User user = optionalUser.get();
 					Cart cart;
