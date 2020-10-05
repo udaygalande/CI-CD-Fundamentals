@@ -74,7 +74,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 				Product product = optional.get();
 
 				Optional<User> optionalUser = userRepository.findById(userId);
-				Set<Product> products = null;
+				Set<Product> products;
 				if (optionalUser.isPresent()) {
 					User user = optionalUser.get();
 					Cart cart;
