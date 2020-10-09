@@ -131,12 +131,6 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 	}
 
 	@Override
-	public Cart getCartByUserId(int userId) {
-
-		return null;
-	}
-
-	@Override
 	public User getUserById(int userId) {
 		Optional<User> optional = userRepository.findById(userId);
 		if (optional.isPresent()) {
