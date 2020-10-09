@@ -65,10 +65,6 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
 	}
 
-	@Transactional
-	public List<Product> getCartProducts() {
-		return null;
-	}
 
 	@Transactional
 	public Product addProduct(int productId, int userId) throws MyException {

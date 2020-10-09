@@ -15,7 +15,6 @@ import com.mindtree.model.User;
 public interface ShoppingCartService {
 	
 	public Set<Product> getAllProducts() throws MyException;
-	public List<Product> getCartProducts() throws MyException;
 	public Product addProduct(int productId,int userId) throws MyException;
 	public Product updateProducts( Set<Product> products) throws MyException;
 	public Cart updateCart(Cart cart) throws MyException;
